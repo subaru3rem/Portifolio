@@ -28,7 +28,7 @@ function App() {
           </p>
         </div>
       </section>
-      <section className='red'>
+      <section className='primary_color'>
       <div className='destaques'>
         <div className='textos'>
           <h1>O que eu faço?</h1>
