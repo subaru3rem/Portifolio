@@ -1,5 +1,8 @@
 import img_perfil from './images/img_perfil.jpg';
 import programming_photo from './images/programming_photo.jpg';
+import ella_site_desktop from './images/site_ella_desktop.png';
+import arrow_next from './images/arrow_next.png';
+import arrow_previos from './images/arrow_previos.png';
 import './App.css';
 
 function App() {
@@ -24,7 +27,7 @@ function App() {
           paixão reacender, minha paixão pela área foi renovada e ainda através dessa instituição eu
           aprendi a progamar e tive diversas dicas e aprendizados na área que me trouxe ao momento em
           que estou hoje, nesse site terá um pouco da minha caminhada e das minhas conquistas na área,
-          espero que gostem do que vêem e muito obrigada pela visita
+          espero que gostem do que vêem e muito obrigado pela visita
           </p>
         </div>
       </section>
@@ -43,6 +46,40 @@ function App() {
         </div>
         <img src={programming_photo} className='imgs'/>
       </div>
+      </section>
+      <section className='projetos'>
+        <div id='projetos_titulo'>
+        <p>Projetos</p>
+        </div>
+        <div className='projetos_painel'>
+        <button onClick={()=>console.log('foi')}><img src={arrow_previos}/></button>
+        <div className='projeto'>
+          <div>
+          <h1>Site minha namorada</h1>
+          <p>Um site que eu fiz para minha namorada no começo dos meus estudos,por esse fato,
+            diversas coisas estão em seus modelos iniciais,mas em algum momento eu pretendo recriá-lo
+            com meus novos conhecimentos. </p>
+          <p>
+            link do site:<br/><a href='https://ella-site.vercel.app'>https://ella-site.vercel.app</a><br/><br/>
+            link github:<br/> <a href='https://github.com/subaru3rem/ella-site'>https://github.com/subaru3rem/ella-site</a>
+          </p>
+          </div> 
+          <img src={ella_site_desktop}/>
+        </div>
+        <div className='projeto'>
+          <div>
+          <h2>Clone site nave do conhecimento</h2>
+          <p>
+            Esse é um projeto full-stack que eu comecei enquanto estava no curso de front-end e depois 
+            conclui ele com um projeto de servido feito em python usando o framework flask, esse foi 
+            um dos projetos onde eu obtive mais aprendizado, tendo aprendido diversas ferramentas tanto
+            no front-end quanto no back-end. 
+          </p>
+          </div>
+          <img></img>
+        </div>
+        <button onClick={()=>console.log('foi')}><img src={arrow_next}/></button>
+        </div>
       </section>
     </div>
   );

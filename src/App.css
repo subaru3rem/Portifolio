@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock');
 *{
   color: white;
   --primary_color:#3c1010;
@@ -21,8 +22,6 @@
 }
 #menu_principal a::after{
   content: '';
-  position: absolute;
-  bottom: 2px;
   width: 0;
   transition: width 1s ease-out;
 }
@@ -52,4 +51,60 @@
 }
 .textos h1{
   font-size: 200%;
+}
+.projetos{
+  text-align: center;
+  
+}
+#projetos_titulo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1%;
+}
+#projetos_titulo p{
+  margin: 0;
+  font-size: 200%;
+  font-family: 'Gloock', serif;
+}
+#projetos_titulo::before, #projetos_titulo::after{
+  content: '';
+  height: 2px;
+  width: 50%;
+  background-color: white;
+  margin: 1%;
+}
+.projetos_painel{
+  width: 100%;
+  height: 38vw;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 10%;
+}
+.projetos button{
+  padding: 12% 0;
+  width: 7%;
+  background-color:var(--bg_color);
+  border: none;
+}
+.projetos button img{
+  filter: brightness(100);
+}
+.projeto{
+  position: absolute;
+  display: none;
+  width: 75%;
+  padding: 5%;
+  box-shadow: 0px 0px 55px 1px rgba(0,0,0,0.77);
+  left: 7.5%;
+}
+.projeto:nth-of-type(1){
+  display: flex;
+}
+.projeto img{
+  width: 65%;
+  margin-left: 5%;
 }
