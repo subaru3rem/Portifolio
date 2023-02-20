@@ -1,7 +1,7 @@
 import img_perfil from './images/img_perfil.jpg';
 import programming_photo from './images/programming_photo.jpg';
 import './App.css';
-import Projetos from './projetos';
+import {Projetos, button_next, button_previos} from './projetos';
 import arrow_next from './images/arrow_next.png';
 import arrow_previos from './images/arrow_previos.png';
 
@@ -52,9 +52,9 @@ function App() {
         <p>Projetos</p>
         </div>
         <div className='projetos_painel'>
-        <button><img src={arrow_previos}/></button>
+        <button onClick={button_previos}><img src={arrow_previos}/></button>
         <Projetos/>
-        <button><img src={arrow_next}/></button>
+        <button onClick={button_next}><img src={arrow_next}/></button>
         </div>
       </section>
     </div>
