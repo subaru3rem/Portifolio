@@ -4,6 +4,9 @@ import './App.css';
 import {Projetos, button_next, button_previos} from './projetos';
 import arrow_next from './images/arrow_next.png';
 import arrow_previos from './images/arrow_previos.png';
+import img_email from './images/img_email.png';
+import img_insta from './images/img_insta.png';
+import img_github from './images/img_github.png';
 
 function App() {
   return (
@@ -57,8 +60,49 @@ function App() {
         <button onClick={button_next}><img src={arrow_next}/></button>
         </div>
       </section>
+      <footer>
+        <div className='titulo_contatos'>
+        <h1>Contatos</h1>
+        </div>
+        <p>
+          Aqui disponibilizarei algumas formas para você me conhecer mais e para entrar em contato comigo, caso goste do meu trabalho
+        </p>
+        <div className='contatos'>
+        <Contatos/>
+        </div>
+      </footer>
     </div>
   );
+}
+function Contatos(){
+  var dados = [
+  {
+    'nome':'Email',
+    'imagem':img_email,
+    'conteudo':'cainancosta6@gmail.com'
+  },
+  {
+    'nome':'Instagram',
+    'imagem':img_insta,
+    'conteudo':'subaru.3.rem'
+  },
+  {
+    'nome':'Github',
+    'imagem':img_github,
+    'conteudo':'subaru3rem'
+  }]
+  var divs = dados.map(
+    props => 
+    <div className='contato'>
+      <div>
+      <h3>{props.nome}</h3>
+      </div>
+      <img src={props.imagem}/>
+      <div>
+      <p>{props.conteudo}</p>
+      </div>
+    </div>)
+  return divs
 }
 
 

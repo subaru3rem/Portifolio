@@ -102,7 +102,6 @@
 .projeto:nth-of-type(1){
   display: flex;
 }
-
 .projeto_text{
   width: 30%;
 }
@@ -114,7 +113,21 @@
   justify-content: space-evenly;
   width: 80%;
 }
-
+footer{
+  width: 100%;
+  padding: 1% 5%;
+}
+.contatos{
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+.contato{
+  text-align: center;
+}
+.contato img{
+  width: 50%;
+}
 @media only screen and (max-width:1200px){
   .projeto{
     flex-direction: column;
