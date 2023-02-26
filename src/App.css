@@ -333,6 +333,7 @@ footer{
     padding: 0 5%;
     font-family: 'Gloock', serif;
     font-size: x-large;
+    margin: 3% 0;
   }
   .bt_responsive{
     width: 15%;
