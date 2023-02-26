@@ -11,12 +11,8 @@ import img_github from './images/img_github.png';
 function App() {
   return (
     <div>
-      <header id='menu_principal'>
-        <a>Quem sou?</a>
-        <a>O que eu faço?</a>
-        <a>Projetos</a>
-        <a>Contatos</a>
-      </header>
+      <Header/>
+      <Header_responsive/>
       <section className='destaques'>
         <img src={img_perfil} className='imgs'/>
         <div className='textos'>
@@ -55,14 +51,16 @@ function App() {
         <p>Projetos</p>
         </div>
         <div className='projetos_painel'>
-        <button onClick={button_previos}><img src={arrow_previos}/></button>
         <Projetos/>
-        <button onClick={button_next}><img src={arrow_next}/></button>
+        <div className='buttons'>
+          <button onClick={button_previos}><img src={arrow_previos}/></button>
+          <button onClick={button_next}><img src={arrow_next}/></button>
+        </div>
         </div>
       </section>
       <footer>
         <div className='titulo_contatos'>
-        <h1>Contatos</h1>
+        <p>Contatos</p>
         </div>
         <p>
           Aqui disponibilizarei algumas formas para você me conhecer mais e para entrar em contato comigo, caso goste do meu trabalho
@@ -74,22 +72,66 @@ function App() {
     </div>
   );
 }
+function Header(){
+  let destaques = document.getElementsByClassName('destaques');
+  let projetos = document.getElementsByClassName('projetos');
+  let contatos = document.getElementsByClassName('titulo_contatos');
+  return <header id='menu_principal'>
+  <a onClick={()=>destaques[0].scrollIntoView({behavior: "smooth"})}>Quem sou?</a>
+  <a onClick={()=>destaques[1].scrollIntoView({behavior: "smooth"})}>O que eu faço?</a>
+  <a onClick={()=>projetos[0].scrollIntoView({behavior: "smooth"})}>Projetos</a>
+  <a onClick={()=>contatos[0].scrollIntoView({behavior: "smooth"})}>Contatos</a>
+</header>
+}
+function Header_responsive(){
+  let destaques = document.getElementsByClassName('destaques');
+  let projetos = document.getElementsByClassName('projetos');
+  let contatos = document.getElementsByClassName('titulo_contatos');
+  return <header class="responsive">
+  <div class="menu_responsive">
+      <p class="item_responsive">Caina_dev</p>
+      <button className='bt_responsive' onClick={bt_responsive}>
+       <div></div>
+       <div></div>
+       <div></div>
+      </button>
+  </div>
+  <nav id="responsive_menu">
+  <a onClick={()=>destaques[0].scrollIntoView({behavior: "smooth"})}>Quem sou?</a>
+  <a onClick={()=>destaques[1].scrollIntoView({behavior: "smooth"})}>O que eu faço?</a>
+  <a onClick={()=>projetos[0].scrollIntoView({behavior: "smooth"})}>Projetos</a>
+  <a onClick={()=>contatos[0].scrollIntoView({behavior: "smooth"})}>Contatos</a>
+  </nav>
+</header>
+}
+function bt_responsive(){
+  let menu_responsive = document.getElementById('responsive_menu');
+  if(menu_responsive.style.display=='flex'){
+    menu_responsive.style.display = 'none'
+  }
+  else{
+    menu_responsive.style.display = 'flex'
+  }
+}
 function Contatos(){
   var dados = [
   {
     'nome':'Email',
     'imagem':img_email,
-    'conteudo':'cainancosta6@gmail.com'
+    'conteudo':'cainancosta6@gmail.com',
+    'link':'cainancosta6@gmail.com'
   },
   {
     'nome':'Instagram',
     'imagem':img_insta,
-    'conteudo':'subaru.3.rem'
+    'conteudo':'subaru.3.rem',
+    'link':'https://www.instagram.com/subaru.3.rem/'
   },
   {
     'nome':'Github',
     'imagem':img_github,
-    'conteudo':'subaru3rem'
+    'conteudo':'subaru3rem',
+    'link':'https://github.com/subaru3rem'
   }]
   var divs = dados.map(
     props => 
@@ -100,9 +142,18 @@ function Contatos(){
       <img src={props.imagem}/>
       <div>
       <p>{props.conteudo}</p>
+      <input type='hidden' id={props.nome} value={props.link} />
+      </div>
+      <div className='copy_cntt'>
+        <button onClick={()=>copy(props.nome)}>Copy</button>
       </div>
     </div>)
   return divs
+}
+function copy(name){
+  let input = document.getElementById(name);
+  navigator.clipboard.writeText(input.value)
+  alert('Link copiado')
 }
 
 

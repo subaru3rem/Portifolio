@@ -84,7 +84,12 @@
   position: relative;
   margin-bottom: 10%;
 }
-.projetos button{
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons button{
   padding: 12% 0;
   width: 7%;
   background-color:var(--bg_color);
@@ -115,20 +120,96 @@
 }
 footer{
   width: 100%;
-  padding: 1% 5%;
+  text-align: center;
+  background-color: var(--primary_color);
+  padding: 1.5% 0;
 }
 .contatos{
-  width: 90%;
-  display: flex;
-  justify-content: space-around;
+    margin: 4% 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--primary_color);
+}
+.titulo_contatos p{
+  margin: 0;
+  font-size: 200%;
+  font-family: 'Gloock', serif;
+}
+.titulo_contatos::before,.titulo_contatos::after{
+  content: '';
+  height: 2px;
+  width: 50%;
+  background-color: white;
+  margin: 1%;
 }
 .contato{
+  background-color: var(--bg_color);
   text-align: center;
+  width: 30%;
+  border-radius: 10%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .contato img{
   width: 50%;
 }
+.titulo_contatos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3% 0;
+}
+.copy_cntt{
+  opacity: 0;
+  visibility: hidden;
+  transition:visibility 0.3s linear,opacity 0.3s linear;
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+  background-color: rgba(255, 255, 255, 0.582);
+}
+.copy_cntt button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  margin-top: -15%;
+  left: 50%;
+  margin-left: -15%;
+  height: 8vw;
+  width: 8vw;
+  border-radius: 50%;
+  font-size: x-large;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: var(--primary_color);
+}
+.contato button::after,
+.copy_cntt button::before{
+  content: "";
+  display: block;
+  padding: 50% 0;
+}
+.contato:hover .copy_cntt{
+  opacity: 1;
+  visibility: visible;
+}
+.responsive{
+  display: none;
+}
 @media only screen and (max-width:1200px){
+  .projetos_painel{
+    height: auto;
+  }
   .projeto{
     flex-direction: column;
     justify-content: center;
@@ -150,5 +231,122 @@ footer{
   }
   .projetos button{
     padding: 38% 0;
+  }
+}
+@media only screen and (max-width:750px){
+  .destaques{
+    flex-direction: column;
+  }
+  .destaques:last-of-type{
+    flex-direction: column-reverse;
+  }
+  .imgs, .textos{
+    width: 90%;
+  }
+  .projetos_painel{
+    flex-direction: column;
+  }
+  .projeto{
+    position: static;
+    margin: auto;
+  }
+  .buttons{
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    -webkit-box-shadow: 0px 31px 31px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 31px 31px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 31px 31px -10px rgba(0,0,0,0.75);
+  }
+  .buttons button{
+    padding: 1vw 0;
+    border: 1px rgba(0, 0, 0, 0.24) outset;
+    width: 50%;
+  }
+  .buttons img{
+    width: 10%;
+  }
+  footer >p{
+    margin: 0 10%;
+  }
+  .contatos{
+    flex-wrap: wrap;
+  }
+  .contato{
+    width: 45%;
+    margin: 2%;
+  }
+  .copy_cntt button{
+    margin-top: -15%;
+    margin-left: -15%;
+    height: 12vw;
+    width: 12vw;
+  }
+}
+@media only screen and (max-width:600px){
+  .contato{
+    width: 65%;
+    margin: 2%;
+  }
+  .copy_cntt button{
+    margin-top: -15%;
+    margin-left: -15%;
+    height: 18vw;
+    width: 18vw;
+  }
+  #menu_principal{
+    display: none;
+  }
+  .responsive{
+    display: block;
+  }
+  #responsive_menu{
+    display: none;
+    flex-direction: column;
+  }
+  #responsive_menu a{
+    width: 100%;
+    height: 5vw;
+    padding: 3% 3vw;
+    background-color: var(--primary_color);
+    border-top: 1px #fff outset;
+    border-bottom: 1px #fff outset;
+  }
+  .responsive .menu_link{
+    display: block;
+  }
+  .menu_responsive{
+    margin: none;
+  }
+  .menu_responsive{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 3%;
+    border: none;
+    font-size: 120%;
+    background-color: var(--primary_color);
+  }
+  .item_responsive{
+    width: 85%;
+    padding: 0 5%;
+    font-family: 'Gloock', serif;
+    font-size: x-large;
+  }
+  .bt_responsive{
+    width: 15%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background-color: var(--primary_color);
+    margin: 3% 1%;
+  }
+  .bt_responsive div{
+    background-color: #fff;
+    width: 75%;
+    height: 1vw;
+    margin: 0.8vw 0;
   }
 }
