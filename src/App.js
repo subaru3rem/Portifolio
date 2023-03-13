@@ -35,12 +35,12 @@ function App() {
         <div className='textos'>
           <h1>O que eu faço?</h1>
           <p>
-          Ja sabem um pouco da minha trajetória mas vamos ao que interessa, o que eu sei fazer?
+          Já sabem um pouco da minha trajetória mas vamos ao que interessa, o que eu sei fazer?
           Creio que já posso me considerar um desenvolvedor full-stack apesar de ainda estar
           aprendendo e estar em constante evolução, tenho projetos na área do front-end, back-end
           e um aplicativo mobile e irei apresentar eles, tenho alguns projetos além dos que serão
           apresentados aqui, então se houver algum interessante em como eles foram feitos e sobre
-          outros projetos, não deixe de olhar meu github listado ao fim da página.
+          outros projetos, não deixe de olhar meu Github listado ao fim da página.
           </p>
         </div>
         <img src={programming_photo} className='imgs'/>

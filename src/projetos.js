@@ -9,20 +9,20 @@ import React from 'react';
 var projetos = [
     {
         'titulo':'Site minha namorada', 
-        'resumo':'Um site que eu fiz para minha namorada no começo dos meus estudos,por esse fato, diversas coisas estão em seus modelos iniciais,mas em algum momento eu pretendo recriá-lo com meus novos conhecimentos.',
+        'resumo':'Um site que eu fiz para minha namorada no começo dos meus estudos, por esse fato, diversas coisas estão em seus modelos iniciais, mas em algum momento eu pretendo recriá-lo com meus novos conhecimentos.',
         'link_site': 'https://ella-site.vercel.app',
         'link_github':'https://github.com/subaru3rem/ella-site',
         'imagem':[ella_site_desktop]
     },
     {
         'titulo':'Nave do Conhecimento',
-        'resumo':'Esse é um projeto full-stack que eu fiz ao fim do meu curso de front-end e continuei ao adquirir conhecimentos de servidor estudando flask em python, é uma reconstrução completa do site com um mini sistema de altenticação e gerenciamento de cookies',
+        'resumo':'Esse é um projeto full-stack que eu fiz ao fim do meu curso de front-end e continuei ao adquirir conhecimentos de servidor estudando flask em python, é uma reconstrução completa do site com um míni sistema de autenticação e gerenciamento de cookies.',
         'link_github':'https://github.com/subaru3rem/Nave_do_conhecimento',
         'imagem': [site_nave_desktop]
     },
     {
         'titulo':'Icaros',
-        'resumo':'Um projeto mobile que eu fiz para realizar algumas finalidades que eu considero util de se ter, além de me dar um conhecimento que eu sempre quis no desenvolvimento mobile',
+        'resumo':'Um projeto mobile que eu fiz para realizar algumas finalidades que eu considero útil de se ter, além de me dar um conhecimento que eu sempre quis no desenvolvimento mobile.',
         'link_github':'https://github.com/subaru3rem/Icaros',
         'imagem': [icaros_home, icaros_multimidia, icaros_navegador]
     }
