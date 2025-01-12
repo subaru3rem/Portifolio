@@ -118,8 +118,8 @@ function Contatos(){
   {
     'nome':'Email',
     'imagem':img_email,
-    'conteudo':'caina.code@gmail.com',
-    'link':'caina.code@gmail.com'
+    'conteudo':'cainancosta6@gmail.com',
+    'link':'cainancosta6@gmail.com'
   },
   {
     'nome':'Instagram',
