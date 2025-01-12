@@ -1,4 +1,3 @@
-import ella_site_desktop from './images/site_ella_desktop.png';
 import site_nave_desktop from './images/site_nave_do_conhecimento_desktop.png';
 import icaros_home from './images/icaros_home.png';
 import icaros_multimidia from './images/icaros_multimidia.png';
@@ -7,13 +6,6 @@ import React from 'react';
 
 
 var projetos = [
-    {
-        'titulo':'Site minha namorada', 
-        'resumo':'Um site que eu fiz para minha namorada no começo dos meus estudos, por esse fato, diversas coisas estão em seus modelos iniciais, mas em algum momento eu pretendo recriá-lo com meus novos conhecimentos.',
-        'link_site': 'https://ella-site.vercel.app',
-        'link_github':'https://github.com/subaru3rem/ella-site',
-        'imagem':[ella_site_desktop]
-    },
     {
         'titulo':'Nave do Conhecimento',
         'resumo':'Esse é um projeto full-stack que eu fiz ao fim do meu curso de front-end e continuei ao adquirir conhecimentos de servidor estudando flask em python, é uma reconstrução completa do site com um míni sistema de autenticação e gerenciamento de cookies.',
@@ -25,6 +17,18 @@ var projetos = [
         'resumo':'Um projeto mobile que eu fiz para realizar algumas finalidades que eu considero útil de se ter, além de me dar um conhecimento que eu sempre quis no desenvolvimento mobile.',
         'link_github':'https://github.com/subaru3rem/Icaros',
         'imagem': [icaros_home, icaros_multimidia, icaros_navegador]
+    },
+    {
+        'titulo':'Libft',
+        'resumo':'Primeiro projeto que eu fiz no inicio do curso da 42 | Rio onde eu tenho que montar uma lib em c das principais funções da linguem ultilizando quase nenhuma função externa alem do basico da linguagem.',
+        'link_github':'https://github.com/subaru3rem/libft',
+        'imagem': []
+    },
+    {
+        'titulo':'Rinha de dev',
+        'resumo':'Repositorio que criei para me familiarizar com o desenvolvimento de api em c#, ultilizei um desafio simples de back-end que visava ultilizar os metodos mais comuns em uma api e testar sua eficiencia.',
+        'link_github':'https://github.com/subaru3rem/rinha-dev',
+        'imagem': []
     }
 ]
 function Projeto(projeto){
@@ -57,7 +61,7 @@ function verif(props){
     }
 }
 function Imgs(props){
-    var imgs = props.imagem.map(img=> <img src={img}/>)
+    var imgs = props.imagem.map(img => <img src={img} alt=""/>)
     return imgs;
 }
 var indice = 0;
@@ -68,7 +72,6 @@ export function button_next(){
   projetos[indice].style.display = 'flex';
 };
 export function button_previos(){
-    var projetos = document.getElementsByClassName('projeto');
     var projetos = document.getElementsByClassName('projeto');
     projetos[indice].style.display = 'none';
     if(indice > 0){indice-=1}else{indice= projetos.length-1}

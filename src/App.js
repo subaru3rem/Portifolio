@@ -46,16 +46,16 @@ function App() {
         <img src={programming_photo} className='imgs'/>
       </div>
       </section>
-      <section className='projetos'>
+      <section className='projects'>
         <div id='projetos_titulo'>
         <p>Projetos</p>
         </div>
         <div className='projetos_painel'>
+        <button className="project_button" onClick={button_previos}><img src={arrow_previos}/></button>
+        <div className="projetos">
         <Projetos/>
-        <div className='buttons'>
-          <button onClick={button_previos}><img src={arrow_previos}/></button>
-          <button onClick={button_next}><img src={arrow_next}/></button>
         </div>
+        <button className="project_button" onClick={button_next}><img src={arrow_next}/></button>
         </div>
       </section>
       <footer>
